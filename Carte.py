@@ -34,3 +34,31 @@ if response.status_code == 200:
 else:
     print("Échec du téléchargement du fichier.")
 
+# Carte interactive qui s'ouvre en HTML
+# URL des données
+url = "https://data.iledefrance-mobilites.fr/api/explore/v2.1/catalog/datasets/emplacement-des-gares-idf/exports/geojson?lang=fr&timezone=Europe%2FBerlin"
+
+# Téléchargement des données depuis l'URL
+response = requests.get(url)
+
+# Vérification du statut de la requête
+if response.status_code == 200:
+    # Créer une carte
+    m = folium.Map(location=[48.8566, 2.3522], zoom_start=10)  # Centre la carte sur Paris
+
+    # Charger les données dans un DataFrame pandas
+    data = response.json()
+    for feature in data['features']:
+        properties = feature['properties']
+        lon, lat = feature['geometry']['coordinates']
+        nom_gares = properties.get('nom_gares', 'Nom non disponible')
+        
+        # Ajouter un marqueur pour chaque gare sur la carte
+        folium.Marker(location=[lat, lon], popup=nom_gares).add_to(m)
+
+    # Afficher la carte
+    m.save('carte_gares_idf.html')  # Sauvegarder la carte en HTML
+    m
+else:
+    print("La requête a échoué.")
+
