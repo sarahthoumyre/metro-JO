@@ -1,2 +1,66 @@
 Gares et stations du réseau ferré : 
 https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/export/?location=13,48.84806,2.34249&basemap=jawg.streets&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQVZHIiwieUF4aXMiOiJpZF9nYXJlcyIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiM2NmMyYTUifV0sInhBeGlzIjoibW9kZSIsIm1heHBvaW50cyI6NTAsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6ImVtcGxhY2VtZW50LWRlcy1nYXJlcy1pZGYiLCJvcHRpb25zIjp7fX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D
+
+
+# Scrapping ligne métro 1 : 
+
+# étapes préliminaires, packages etc
+!pip install -q lxml
+
+import bs4
+import lxml
+import pandas
+import urllib
+
+from bs4 import BeautifulSoup
+
+from urllib.parse import quote 
+
+from urllib import request
+
+!pip install webdriver-manager
+
+# URL de la page Wikipédia
+url = "https://fr.wikipedia.org/wiki/Ligne_1_du_métro_de_Paris"
+
+# Récupération du contenu de la page
+response = requests.get(url)
+if response.status_code == 200:
+    html_content = response.text
+
+    # Créer un objet BeautifulSoup à partir du contenu HTML
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # Recherche du tableau spécifique dans la page Wikipédia
+    tables = soup.find_all("table", {"cellspacing": "0", "cellpadding": "2", "border": "0", "style": "border: 1px solid #999; background-color:#FFFFFF; text-align: center"})
+
+    # Extraction des données du tableau dans une liste de listes
+    tableau = []
+    if tables:
+        # Sélection du premier tableau correspondant aux attributs spécifiés
+        table = tables[0]
+
+        rows = table.find_all("tr")
+        for row in rows:
+            cols = row.find_all(["th", "td"])
+            cols_data = [col.text.strip() for col in cols]
+            tableau.append(cols_data)
+
+    # Affichage du tableau extrait
+    for ligne in tableau:
+        print(ligne)
+else:
+    print("La requête a échoué.")
+
+# Nettoyage du tableau 
+for ligne in tableau:
+    if len(ligne) > 1:  # Vérifier si la ligne a plus d'une colonne
+        del ligne[6]     
+        del ligne[5]  # Supprimer la deuxième colonne
+        del ligne[1]
+        del ligne[0]
+        del ligne[0]
+# Affichage du tableau nettoyé 
+for ligne in tableau:
+    print(ligne)
+
