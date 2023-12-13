@@ -42,10 +42,10 @@ vecteur = ['Stade Tour Eiffel' if i < 4 else
            'Arena Paris Nord' if i < 89 else
            'Valeur par défaut' for i in range(73)]
 
-data_frame.index = vecteur
+    data_frame.index = vecteur
 
-    # Affichage du DataFrame obtenu
-    display(df)
+# Affichage du DataFrame obtenu
+display(df)
 
 except Exception as e:
     print("Une erreur s'est produite :", str(e))
