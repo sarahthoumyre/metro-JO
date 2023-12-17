@@ -24,8 +24,6 @@ lieux = [
 'arena-paris-nord'
 ]
 
-
-
 # URLs correspondant à chaque lieu
 urls = [
     f"https://www.paris2024.org/fr/site/{lieu.replace(' ', '-').lower()}/" for lieu in lieux
