@@ -1,26 +1,25 @@
 import pandas as pd
 import tabula
 
-lieux = ['Stade Tour Eiffel','Arena Champ-de-Mars', 'Grand Palais', 'Invalides', 'Hôtel de Ville', 'Pont Alexandre III', 'Trocadéro', 'La Concorde', 'Stade Roland-Garros', 'Arena Paris Sud', 'Arena Bercy', 'Arena Porte de la Chapelle', 'Paris la Défense Arena', 'Centre aquatique', 'Stade de France', 'Site escalade du Bourget', 'Arena Paris Nord']
+lieux = ['Stade Tour Eiffel','Arena Champ-de-Mars', 'Grand Palais', 'Invalides', 'Pont Alexandre III', 'Trocadéro', 'La Concorde', 'Stade Roland-Garros', 'Arena Paris Sud', 'Arena Bercy', 'Arena Porte de la Chapelle', 'Paris la Défense Arena', 'Centre aquatique', 'Stade de France', 'Site escalade du Bourget', 'Arena Paris Nord']
 
 vecteur = ['Stade Tour Eiffel' if i < 4 else
            'Arena Champ-de-Mars' if i < 8 else
            'Grand Palais' if i < 13 else
            'Invalides' if i < 16 else
-           'Hôtel de Ville' if i < 17 else
-           'Pont Alexandre III' if i < 19 else
-           'Trocadéro' if i < 21 else
-           'La Concorde' if i < 32 else
-           'Stade Roland-Garros' if i < 38 else
-           'Arena Paris Sud' if i < 51 else
-           'Arena Bercy' if i < 61 else
-           'Arena Porte de la Chapelle' if i < 66 else
-           'Paris la Défense Arena' if i < 71 else
-           'Centre aquatique' if i < 77 else
-           'Stade de France' if i < 82 else
-           'Site escalade du Bourget' if i < 84 else
-           'Arena Paris Nord' if i < 88 else
-           'Valeur par défaut' for i in range(88)]
+           'Pont Alexandre III' if i < 18 else
+           'Trocadéro' if i < 20 else
+           'La Concorde' if i < 31 else
+           'Stade Roland-Garros' if i < 37 else
+           'Arena Paris Sud' if i < 50 else
+           'Arena Bercy' if i < 60 else
+           'Arena Porte de la Chapelle' if i < 65 else
+           'Paris la Défense Arena' if i < 70 else
+           'Centre aquatique' if i < 76 else
+           'Stade de France' if i < 81 else
+           'Site escalade du Bourget' if i < 83 else
+           'Arena Paris Nord' if i < 87 else
+           'Valeur par défaut' for i in range(87)]
 
 
 # Lien vers le PDF contenant le tableau
