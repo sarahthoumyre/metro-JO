@@ -6,7 +6,6 @@ lieux = [
 'arena-champ-de-mars',
 'grand-palais',
 'invalides',
-'hotel-de-ville',
 'pont-alexandre-iii',
 'trocadero', 
 'la-concorde',
