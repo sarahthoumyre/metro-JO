@@ -41,4 +41,19 @@ Notre objectif est de concevoir un programme qui, à partir de données telles q
 - Statistiques descriptives : 
 
 ## Packages nécessaires
+- Java : Non installable via pip, mais nécessaire pour tabula-py.
+- tabula-py : Utilisé pour extraire des données de fichiers PDF au format tabulaire.
+- openpyxl : Utilisé pour lire et écrire des fichiers Excel au format xlsx.
+- pandas : Bibliothèque de manipulation et d'analyse de données.
+- numpy : Bibliothèque pour le calcul numérique.
+- geopandas : Utilisé pour manipuler des données géospatiales.
+- requests : Pour effectuer des requêtes HTTP.
+- io : Module pour gérer les flux d'entrée/sortie.
+- matplotlib.pyplot : Utilisé pour créer des visualisations.
+- re : Module pour les expressions régulières.
+- bs4 (BeautifulSoup) : Bibliothèque pour le scraping web.
+- difflib : Module pour calculer les différences entre des chaînes de caractères.
+- IPython.utils : Module IPython pour les fonctionnalités utilitaires.
+- display : Pour afficher des objets IPython.
+On utilise %pip install <nom_du_package> pour installer les packages dans une cellule de notebook. 
 
