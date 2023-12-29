@@ -1,4 +1,4 @@
-# La voie vers les Jeux: Anticiper l'afflux dans les stations de métro pour Paris 2024
+# La voie vers les Jeux : Anticiper l'afflux dans les stations de métro pour Paris 2024
 
 Les Jeux Olympiques de Paris 2024 éveillent l'enthousiasme avec des promesses ambitieuses mais aussi des défis cruciaux, en particulier dans le domaine de la mobilité. Les attentes sont élevées, portées par la volonté de garantir des déplacements fluides, durables et sécurisés pour tous. Néanmoins, les retards dans la réalisation du projet du Grand Paris Express et l'absence de gratuité des tickets de métro pendant cette période ont mis en évidence des défis majeurs à relever pour la région Île-de-France.
 
