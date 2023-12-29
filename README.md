@@ -31,7 +31,7 @@ Notre objectif est de concevoir un programme qui, à partir de données telles q
 * 2022_S2_NB_FER.csv
 * 2022_S2_NB_FER.csv
 
-### Données importées
+### Données nettoyées 
 - Calendrier :
 - Données stations de métro 2022 :
 - Informations lieux des compétitions :
@@ -54,6 +54,6 @@ Notre objectif est de concevoir un programme qui, à partir de données telles q
 - bs4 (BeautifulSoup) : Bibliothèque pour le scraping web.
 - difflib : Module pour calculer les différences entre des chaînes de caractères.
 - IPython.utils : Module IPython pour les fonctionnalités utilitaires.
-- display : Pour afficher des objets IPython.
+- display : Pour afficher des objets IPython./
 On utilise %pip install <nom_du_package> pour installer les packages dans une cellule de notebook. 
 
