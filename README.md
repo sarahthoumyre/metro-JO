@@ -24,7 +24,7 @@ Dans un monde idéal où la région Île-de-France honore ses promesses, permett
 ## Notre programme de prédiction d'affluence
 Notre objectif est de concevoir un programme qui, à partir de données telles que l'horaire, la date, la ligne spécifique du métro, et la station sélectionnée, sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives. /
 
-## Récapitulatif des fichiers présents sur notre Github :
+## Récapitulatif des fichiers présents sur notre Github
 
 ### Données importées
 - Dans le dossier Données importées :
@@ -32,10 +32,16 @@ Notre objectif est de concevoir un programme qui, à partir de données telles q
 * 2022_S2_NB_FER.csv
 
 ### Données nettoyées 
-- Calendrier :
-- Données stations de métro 2022 :
-- Informations lieux des compétitions :
-- Informations lignes métro :
+- ***Calendrier*** /
+Ce jeu de données présente le calendrier complet des compétitions pendant les Jeux Olympiques. Issu du web scraping d'un calendrier en ligne, il a été traité pour convertir les dates et heures en format de date et d'heure Python afin de les rendre utilisables. Le tableau a été divisé en deux : un pour les heures de début et un pour les heures de fin. En tenant compte des indications de l'organisation des JO, une réduction de 1h30 a été appliquée à chaque heure de début, et 30 minutes ont été ajoutées à l'heure de fin pour prendre en compte le temps de départ des lieux. Ces heures ont ensuite été converties en plages horaires pour une meilleure utilisation dans le programme. On conserve uniquement les lieux à Paris et le Stade de France. 
+- ***Données stations de métro 2022*** /
+Ces données historiques représentent les informations sur les stations de métro pendant la période des JO en 2022, offrant ainsi une vision historique des services et de la disponibilité des stations à cette époque. Elles servent de référence pour analyser les schémas de trafic et de mouvement des voyageurs pendant les Jeux Olympiques.
+
+- ***Informations lieux des compétitions*** / 
+Ces données sont issues du web scraping et fournissent des détails importants sur les différents lieux où se déroulent les événements olympiques. Elles comprennent des informations telles que les adresses, les capacités d'accueil, les descriptions des infrastructures et d'autres détails pertinents permettant de mieux comprendre chaque site olympique. Les lieux des compétitions non desservies par les métros sont retirés de notre étude. 
+
+- ***Informations lignes métro*** /
+Ce jeu de données contient des détails spécifiques sur les lignes de métro concernées pendant la période des Jeux Olympiques. Ces informations peuvent inclure les horaires de fonctionnement, les fréquences, les arrêts desservis, les connexions et autres détails opérationnels pour faciliter les déplacements des participants et des spectateurs vers les différents sites olympiques.
   
 - Programmes :
 - Statistiques descriptives : 
