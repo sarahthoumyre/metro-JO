@@ -22,7 +22,7 @@ Dans un monde idéal où la région Île-de-France honore ses promesses, permett
   Nous focalisons notre étude sur les prévisions sans considérer les incidents inattendus sur les lignes de métro, afin de visualiser un scénario optimiste.
 
 ## Notre programme de prédiction d'affluence
-Notre objectif est de concevoir un programme qui, à partir de données telles que l'horaire, la date, la ligne spécifique du métro, et la station sélectionnée, sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives.
+Notre objectif est de concevoir un programme qui, à partir de données telles que l'horaire, la date, la ligne spécifique du métro, et la station sélectionnée, sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives. /
 
 ## Récapitulatif des fichiers présents sur notre Github :
 
@@ -39,4 +39,6 @@ Notre objectif est de concevoir un programme qui, à partir de données telles q
   
 - Programmes :
 - Statistiques descriptives : 
+
+## Packages nécessaires
 
