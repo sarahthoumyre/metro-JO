@@ -24,4 +24,19 @@ Dans un monde idéal où la région Île-de-France honore ses promesses, permett
 ## Notre programme de prédiction d'affluence
 Notre objectif est de concevoir un programme qui, à partir de données telles que l'horaire, la date, la ligne spécifique du métro, et la station sélectionnée, sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives.
 
+## Récapitulatif des fichiers présents sur notre Github :
+
+### Données importées
+- Dans le dossier Données importées :
+* 2022_S2_NB_FER.csv
+* 2022_S2_NB_FER.csv
+
+### Données importées
+- Calendrier :
+- Données stations de métro 2022 :
+- Informations lieux des compétitions :
+- Informations lignes métro :
+  
+- Programmes :
+- Statistiques descriptives : 
 
