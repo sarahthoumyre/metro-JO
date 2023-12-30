@@ -53,13 +53,13 @@ Nos statistiques descriptives se divisent en deux partie : une première partie 
 
 
 ### B. Données importées
-On trouve dans le dossier Données importées deux jeux de données disponible sur le site https://www.data.gouv.fr/fr/datasets/historique-des-donnees-de-validation-sur-le-reseau-ferre-2015-2022/. Nous utilisons les jeux de données du deuxième semestre de l'année 2022 pour nos données historiques. Ces fichiers ne sont pas directement accessibles via les liens de téléchargement, car le fichier zip contient des fichiers pour différentes années. C'est pourquoi nous les avons mis à disposition sur notre GitHub.
+On trouve dans le dossier Données importées deux jeux de données disponibles sur le site https://www.data.gouv.fr/fr/datasets/historique-des-donnees-de-validation-sur-le-reseau-ferre-2015-2022/. Nous utilisons les jeux de données du deuxième semestre de l'année 2022 pour nos données historiques. Ces fichiers ne sont pas directement accessibles via les liens de téléchargement, car le fichier zip contient des fichiers pour différentes années. C'est pourquoi nous les avons mis à disposition sur notre GitHub.
 * **2022_S2_NB_FER.csv** \
 Ce jeu de données présente le nombre de validations des voyageurs par jour par arrêt et par titre de transport sur le réseau ferré.
 * **2022_S2_PROFIL_FER.csv** \
 Ce jeu de données présente les profils horaires des validations des voyageurs par jour type et par arrêt sur le réseau ferré.
 
-### Données nettoyées 
+### C. Données nettoyées 
 
 1. **Informations lieux des compétitions** 
    
