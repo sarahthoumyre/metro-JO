@@ -91,7 +91,7 @@ L'objectif final est d'avoir un tableau organisé contenant des informations sur
   - io et display de IPython pour la capture de sortie et l'affichage dans un notebook.
   
 ### C. Main
-  Le notebook main contient une copie des notebook Programmes et Statistiques descriptives.  
+  Le notebook Main contient une copie des notebook Programmes et Statistiques descriptives.  
 
   1. **Programmes**
    
