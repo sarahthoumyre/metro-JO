@@ -8,7 +8,7 @@ Cette analyse nous permettrait de visualiser une situation où le système de tr
 Nous espérons offrir une vision prospective, une sorte de "plan de rêve" pour la mobilité à Paris pendant les Jeux Olympiques, même si la réalité actuelle semble plus complexe et moins favorable. Cela pourrait servir de référence pour comprendre les écarts entre l'idéal et les défis actuels, et peut-être proposer des recommandations pour améliorer le système de transport en prévision d'événements futurs d'envergure à Paris.
 
 ## Notre problématique 
-Dans un monde idéal où la région Île-de-France honore ses promesses, permettant à tous d'emprunter le métro, quelles sont les prévisions d’affluences sur chaque ligne de métro et dans chaque station entre le 24 juillet 2024 et le 11 août 2024 ? 
+Dans un monde idéal où la région Île-de-France honore ses promesses, permettant à tous d'emprunter le métro, quelles sont les prévisions d’affluences sur chaque ligne de métro et dans chaque station entre le 24 juillet et le 11 août 2024 ? 
 
 ## Nos hypothèses 
 - 	**Destination : les compétitions**  \
@@ -33,14 +33,12 @@ Ce jeu de données présente le nombre de validations des voyageurs par jour par
 Ce jeu de données présente les profils horaires des validations des voyageurs par jour type et par arrêt sur le réseau ferré.
 
 ### Données nettoyées 
+- **Informations lieux des compétitions** \
+Ces données sont issues du web scraping et fournissent des détails importants sur les différents lieux où se déroulent les événements olympiques. Elles comprennent des informations telles que les adresses, les capacités d'accueil, les descriptions des infrastructures et d'autres détails pertinents permettant de mieux comprendre chaque site olympique. Les lieux des compétitions non desservies par les métros sont retirés de notre étude. 
 - **Calendrier**  \
 Ce jeu de données présente le calendrier complet des compétitions pendant les Jeux Olympiques. Issu du web scraping d'un calendrier en ligne, il a été traité pour convertir les dates et heures en format de date et d'heure Python afin de les rendre utilisables. Le tableau a été divisé en deux : un pour les heures de début et un pour les heures de fin. En tenant compte des indications de l'organisation des JO, une réduction de 1h30 a été appliquée à chaque heure de début, et 30 minutes ont été ajoutées à l'heure de fin pour prendre en compte le temps de départ des lieux. Ces heures ont ensuite été converties en plages horaires pour une meilleure utilisation dans le programme. On conserve uniquement les lieux à Paris et le Stade de France. 
 - **Données stations de métro 2022**  \
 Ces données historiques représentent les informations sur les stations de métro pendant la période des JO en 2022, offrant ainsi une vision historique des services et de la disponibilité des stations à cette époque. Elles servent de référence pour analyser les schémas de trafic et de mouvement des voyageurs pendant les Jeux Olympiques.
-
-- **Informations lieux des compétitions** \
-Ces données sont issues du web scraping et fournissent des détails importants sur les différents lieux où se déroulent les événements olympiques. Elles comprennent des informations telles que les adresses, les capacités d'accueil, les descriptions des infrastructures et d'autres détails pertinents permettant de mieux comprendre chaque site olympique. Les lieux des compétitions non desservies par les métros sont retirés de notre étude. 
-
 - **Informations lignes métro** \
 Ce jeu de données contient des détails spécifiques sur les lignes de métro concernées pendant la période des Jeux Olympiques. Ces informations peuvent inclure les horaires de fonctionnement, les fréquences, les arrêts desservis, les connexions et autres détails opérationnels pour faciliter les déplacements des participants et des spectateurs vers les différents sites olympiques.
 
