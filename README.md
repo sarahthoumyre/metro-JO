@@ -3,8 +3,10 @@
 Les Jeux Olympiques de Paris 2024 éveillent l'enthousiasme avec des promesses ambitieuses mais aussi des défis cruciaux, en particulier dans le domaine de la mobilité. Les attentes sont élevées, portées par la volonté de garantir des déplacements fluides, durables et sécurisés pour tous. Néanmoins, les retards dans la réalisation du projet du Grand Paris Express et l'absence de gratuité des tickets de métro pendant cette période ont mis en évidence des défis majeurs à relever pour la région Île-de-France.
 
 ## Notre projet 
-Notre étude se concentre sur un exercice de prospective visant à explorer comment, même en laissant de côté les imprévus qui ont déjà mis en évidence des difficultés dans la tenue des promesses, les transports en métro pourraient idéalement se dérouler pendant les Jeux Olympiques de Paris 2024. Notre objectif est d'imaginer un scénario optimal où tous les engagements initiaux seraient respectés. \
-Cette analyse nous permettrait de visualiser une situation où le système de transport en commun serait fiable et suffisamment robuste pour acheminer 100% des spectateurs vers leurs destinations sans accroc majeur. \
+Notre étude se concentre sur un exercice de prospective visant à explorer comment, même en laissant de côté les imprévus qui ont déjà mis en évidence des difficultés dans la tenue des promesses, les transports en métro pourraient idéalement se dérouler pendant les Jeux Olympiques de Paris 2024. Notre objectif est d'imaginer un scénario optimal où tous les engagements initiaux seraient respectés. 
+
+Cette analyse nous permettrait de visualiser une situation où le système de transport en commun serait fiable et suffisamment robuste pour acheminer 100% des spectateurs vers leurs destinations sans accroc majeur. 
+
 Nous espérons offrir une vision prospective, une sorte de "plan de rêve" pour la mobilité à Paris pendant les Jeux Olympiques, même si la réalité actuelle semble plus complexe et moins favorable. Cela pourrait servir de référence pour comprendre les écarts entre l'idéal et les défis actuels, et peut-être proposer des recommandations pour améliorer le système de transport en prévision d'événements futurs d'envergure à Paris.
 
 ## Notre problématique 
@@ -16,7 +18,7 @@ Dans un monde idéal où la région Île-de-France honore ses promesses, permett
 - 	**Métro à pleine capacité** \
   Nous partons du principe que chaque participant utilisera le métro dès que possible, formant ainsi une dynamique de déplacement massive.
 - 	**Suivre les conseils officiels des JO** \
-  Les déplacements seront planifiés en harmonie avec les recommandations officielles des Jeux, couvrant les heures d'arrivée recommandées (il est recommandé d’arriver 1H30 avant chaque compétition https://www.paris2024.org/fr/faq/combien-de-temps-avant-le-debut-dune-session-dois-je-arriver-sur-le-site-de-competition/ ) et les lignes de métro à privilégier (les lignes de métro recommandées sont disponibles sur le site https://www.paris2024.org/ ; par exemple pour le site Arena Champ de Mars https://www.paris2024.org/fr/site/arena-champ-de-mars/)
+  Les déplacements seront planifiés en harmonie avec les recommandations officielles des Jeux, couvrant les heures d'arrivée recommandées (il est recommandé d’arriver 1H30 avant chaque compétition https://www.paris2024.org/fr/faq/combien-de-temps-avant-le-debut-dune-session-dois-je-arriver-sur-le-site-de-competition/) et les lignes de métro à privilégier (les lignes de métro recommandées sont disponibles sur le site https://www.paris2024.org/ ; par exemple pour le site Arena Champ de Mars https://www.paris2024.org/fr/site/arena-champ-de-mars/)
 -  **Focus sur l'anticipation, exclusion de l'inattendu** \
   Nous focalisons notre étude sur les prévisions sans considérer les incidents inattendus sur les lignes de métro, afin de visualiser un scénario optimiste.
 
@@ -90,6 +92,21 @@ L'objectif final est d'avoir un tableau bien organisé contenant des information
   - re pour les opérations liées aux expressions régulières.
   - difflib pour trouver les correspondances les plus proches entre les noms des stations.
   - io et display de IPython pour la capture de sortie et l'affichage dans un notebook.
+
+### Programmes
+
+**Principales fonctions** :
+- affluence_hors_jo : Calcule l'affluence à une station et à une heure spécifiques sur une ligne donnée, sans tenir compte des JO.
+- calculer_personnes_supplementaires : Calcule le nombre de personnes supplémentaires à une station et sur une ligne données en raison des JO.
+- info_trafic : Calcule le nombre total de personnes à une station et sur une ligne à une heure spécifique, prenant en compte les JO. Combine les résultats des fonctions précédentes pour obtenir l'affluence totale.
+- comparer_affluences : Compare l'affluence actuelle à une heure donnée à celle prévue pour une heure suivante. Donne des indications sur l'évolution probable du trafic en fonction de cette comparaison.
+- info_trafic_complet : Fournit des informations complètes sur l'affluence à une station et sur une ligne à une heure spécifique, en incluant les prédictions de trafic.
+
+**Packages nécessaires** :
+- Pandas pour la manipulation des données sous forme de tableaux
+- tabula-py pour extraire des données de fichiers PDF sous forme de tableaux
+- numpy pour des calculs numériques
+- IPython pour la capture de sortie dans un notebook Jupyter
 
 ## Bilan des packages nécessaires
 - Java 
