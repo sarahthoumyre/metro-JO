@@ -45,7 +45,7 @@ L'objectif final est d'avoir un tableau organisé contenant des informations sur
   - Les informations sur les lieux des compétitions sont disponibles sur le site officiel de Paris 2024 (https://www.paris2024.org). 
   - Les noms des lieux de compétition ont été fournis sous forme de liste appelée lieux. Les URLs des pages spécifiques pour chaque lieu ont été générées à partir des noms de lieux fournis.
   - Les informations sur les arrêts de métro à proximité et les lignes de métro associées à chaque lieu de compétition peuvent être extraites des pages web spécifiques.
-  - Certaines données manquantes sont obtenues à partir d'autres sources pertinentes comme des articles de presse ou des sites tiers (Pour la Concorde : https://sportetsociete.org/2022/10/20/paris-2024-un-cadre-majestueux-pour-louverture-des-jeux-paralympiques ; pour Arena Paris Sud : https://fr.wikipedia.org/wiki/Arena_Porte_de_la_Chapelle).
+  - Certaines données manquantes sont obtenues à partir d'autres sources pertinentes comme des articles de presse ou des sites tiers (pour la Concorde : https://sportetsociete.org/2022/10/20/paris-2024-un-cadre-majestueux-pour-louverture-des-jeux-paralympiques ; pour Arena Paris Sud : https://fr.wikipedia.org/wiki/Arena_Porte_de_la_Chapelle).
 
   **Packages nécessaires** :
   - Pandas pour la manipulation de données tabulaires.
