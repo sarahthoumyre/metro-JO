@@ -90,44 +90,53 @@ L'objectif final est d'avoir un tableau bien organisé contenant des information
   - difflib pour trouver les correspondances les plus proches entre les noms des stations.
   - io et display de IPython pour la capture de sortie et l'affichage dans un notebook.
   
-  ### C. Main
-Le notebook main contient une copie des notebook Programmes et Statistiques descriptives.  
+### C. Main
+  Le notebook main contient une copie des notebook Programmes et Statistiques descriptives.  
 
-1. **Programmes**
+  1. **Programmes**
    
-**Principales fonctions** :
-- affluence_hors_jo : Calcule l'affluence à une station et à une heure spécifiques sur une ligne donnée, sans tenir compte des JO.
-- calculer_personnes_supplementaires : Calcule le nombre de personnes supplémentaires à une station et sur une ligne données en raison des JO.
-- info_trafic : Calcule le nombre total de personnes à une station et sur une ligne à une heure spécifique, prenant en compte les JO. Combine les résultats des fonctions précédentes pour obtenir l'affluence totale.
-- comparer_affluences : Compare l'affluence actuelle à une heure donnée à celle prévue pour une heure suivante. Donne des indications sur l'évolution probable du trafic en fonction de cette comparaison.
-- info_trafic_complet : Fournit des informations complètes sur l'affluence à une station et sur une ligne à une heure spécifique, en incluant les prédictions de trafic.
+  **Principales fonctions** :
+  - affluence_hors_jo : Calcule l'affluence à une station et à une heure spécifiques sur une ligne donnée, sans tenir compte des JO.
+  - calculer_personnes_supplementaires : Calcule le nombre de personnes supplémentaires à une station et sur une ligne données en raison des JO.
+  - info_trafic : Calcule le nombre total de personnes à une station et sur une ligne à une heure spécifique, prenant en compte les JO. Combine les résultats des fonctions précédentes pour obtenir l'affluence totale.
+  - comparer_affluences : Compare l'affluence actuelle à une heure donnée à celle prévue pour une heure suivante. Donne des indications sur l'évolution probable du trafic en fonction de cette comparaison.
+  - info_trafic_complet : Fournit des informations complètes sur l'affluence à une station et sur une ligne à une heure spécifique, en incluant les prédictions de trafic.
 
-**Packages nécessaires** :
-- Pandas pour la manipulation des données sous forme de tableaux.
-- tabula-py pour extraire des données de fichiers PDF sous forme de tableaux.
-- numpy pour des calculs numériques.
-- IPython pour la capture de sortie dans un notebook Jupyter.
+  **Packages nécessaires** :
+  - Pandas pour la manipulation des données sous forme de tableaux.
+  - tabula-py pour extraire des données de fichiers PDF sous forme de tableaux.
+  - numpy pour des calculs numériques.
+  - IPython pour la capture de sortie dans un notebook Jupyter.
 
-2. **Statistiques descriptives**
-Nos statistiques descriptives se divisent en deux partie : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
+  2. **Statistiques descriptives**  
 
-**Packages nécessaires** :
-- xx A compléter quand ca sera fini
+  Nos statistiques descriptives se divisent en deux partie : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
+
+  **Packages nécessaires** :
+  - Pandas pour la manipulation et l'analyse des données tabulaires.
+  - NumPy pour le calcul numérique et les opérations sur les tableaux.
+  - Matplotlib pour la visualisation de données avec des graphiques statiques.
+  - Plotly pour la création de graphiques interactifs.
+  - Seaborn pour la création de graphiques statistiques esthétiques basés sur Matplotlib.
+  - Scipy pour les calculs statistiques et les tests.
+  - Statsmodels pour l'estimation de modèles statistiques et l'analyse de données.
+  - Tabula pour extraire les données de PDF en fichiers tabulaires. 
+  - Scikit-learn pour l'apprentissage automatique et l'analyse de données prédictives.
 
 ## Bilan des packages nécessaires
-- Java 
-- tabula-py 
-- openpyxl
-- pandas 
-- numpy 
-- geopandas 
-- requests 
-- io 
-- matplotlib.pyplot 
-- re 
-- bs4 (BeautifulSoup) 
-- difflib 
-- IPython.utils 
-- display \
+- Pandas
+- NumPy
+- Requests
+- BeautifulSoup (module bs4)
+- Re
+- Java (pour tabula-py)
+- Tabula
+- IO et Display de IPython
+- Matplotlib
+- Plotly
+- Seaborn
+- Scipy
+- Statsmodels
+- Difflib
+- Scikit-learn.  
 On utilise %pip install <nom_du_package> pour installer les packages dans une cellule de notebook. 
-
