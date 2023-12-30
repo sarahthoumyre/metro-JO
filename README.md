@@ -91,6 +91,21 @@ L'objectif final est d'avoir un tableau bien organisé contenant des information
   - difflib pour trouver les correspondances les plus proches entre les noms des stations.
   - io et display de IPython pour la capture de sortie et l'affichage dans un notebook.
 
+### Programmes
+
+**Principales fonctions** :
+- affluence_hors_jo : Calcule l'affluence à une station et à une heure spécifiques sur une ligne donnée, sans tenir compte des JO.
+- calculer_personnes_supplementaires : Calcule le nombre de personnes supplémentaires à une station et sur une ligne données en raison des JO.
+- info_trafic : Calcule le nombre total de personnes à une station et sur une ligne à une heure spécifique, prenant en compte les JO. Combine les résultats des fonctions précédentes pour obtenir l'affluence totale.
+- comparer_affluences : Compare l'affluence actuelle à une heure donnée à celle prévue pour une heure suivante. Donne des indications sur l'évolution probable du trafic en fonction de cette comparaison.
+- info_trafic_complet : Fournit des informations complètes sur l'affluence à une station et sur une ligne à une heure spécifique, en incluant les prédictions de trafic.
+
+**Packages nécessaires** :
+- Pandas pour la manipulation des données sous forme de tableaux
+- tabula-py pour extraire des données de fichiers PDF sous forme de tableaux
+- numpy pour des calculs numériques
+- IPython pour la capture de sortie dans un notebook Jupyter
+
 ## Bilan des packages nécessaires
 - Java 
 - tabula-py 
