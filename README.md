@@ -21,14 +21,16 @@ Dans un monde idéal où la région Île-de-France honore ses promesses, permett
   Nous focalisons notre étude sur les prévisions sans considérer les incidents inattendus sur les lignes de métro, afin de visualiser un scénario optimiste.
 
 ## Notre programme de prédiction d'affluence
-Notre objectif est de concevoir un programme qui, à partir de données telles que l'horaire, la date, la ligne spécifique du métro, et la station sélectionnée, sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives. Ces résultats sont disponibles sur le main.
+Notre objectif est de concevoir un programme qui, à partir de données (horaire, date, ligne spécifique du métro, station sélectionnée) sera en mesure de fournir des estimations d'affluence à la fois pour l'ensemble de la ligne de métro choisie et pour la station spécifiée à ce moment précis. Après cela, notre intention est d'illustrer nos résultats de prédiction à l'aide de statistiques descriptives. Ces résultats sont disponibles sur le notebook main.
 
 ## Récapitulatif des fichiers présents sur notre Github
 
 ### Données importées
-- Dans le dossier Données importées :
-* 2022_S2_NB_FER.csv
-* 2022_S2_NB_FER.csv
+On trouve dans le dossier Données importées deux jeux de données disponible sur le site https://www.data.gouv.fr/fr/datasets/historique-des-donnees-de-validation-sur-le-reseau-ferre-2015-2022/. Nous utilisons les jeux de données du deuxième semestre de l'année 2022 pour nos données historiques. Ces fichiers ne sont pas directement accessibles via les liens de téléchargement, car le fichier zip contient des fichiers pour différentes années. C'est pourquoi nous les avons mis à disposition sur notre GitHub.
+* **2022_S2_NB_FER.csv** \
+Ce jeu de données présente le nombre de validations des voyageurs par jour par arrêt et par titre de transport sur le réseau ferré.
+* **2022_S2_PROFIL_FER.csv** \
+Ce jeu de données présente les profils horaires des validations des voyageurs par jour type et par arrêt sur le réseau ferré.
 
 ### Données nettoyées 
 - **Calendrier**  \
