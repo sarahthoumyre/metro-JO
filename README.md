@@ -27,7 +27,32 @@ Notre objectif est de concevoir un programme qui, à partir de données (horaire
 
 ## Récapitulatif des fichiers présents sur notre Github
 
-### Données importées
+### A. Main
+Le notebook main contient une copie des notebook Programmes et Statistiques descriptives.  
+
+1. **Programmes**
+   
+**Principales fonctions** :
+- affluence_hors_jo : Calcule l'affluence à une station et à une heure spécifiques sur une ligne donnée, sans tenir compte des JO.
+- calculer_personnes_supplementaires : Calcule le nombre de personnes supplémentaires à une station et sur une ligne données en raison des JO.
+- info_trafic : Calcule le nombre total de personnes à une station et sur une ligne à une heure spécifique, prenant en compte les JO. Combine les résultats des fonctions précédentes pour obtenir l'affluence totale.
+- comparer_affluences : Compare l'affluence actuelle à une heure donnée à celle prévue pour une heure suivante. Donne des indications sur l'évolution probable du trafic en fonction de cette comparaison.
+- info_trafic_complet : Fournit des informations complètes sur l'affluence à une station et sur une ligne à une heure spécifique, en incluant les prédictions de trafic.
+
+**Packages nécessaires** :
+- Pandas pour la manipulation des données sous forme de tableaux
+- tabula-py pour extraire des données de fichiers PDF sous forme de tableaux
+- numpy pour des calculs numériques
+- IPython pour la capture de sortie dans un notebook Jupyter
+
+2. **Statistiques descriptives**
+Nos statistiques descriptives se divisent en deux partie : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
+
+**Packages nécessaires** :
+- xx
+
+
+### B. Données importées
 On trouve dans le dossier Données importées deux jeux de données disponible sur le site https://www.data.gouv.fr/fr/datasets/historique-des-donnees-de-validation-sur-le-reseau-ferre-2015-2022/. Nous utilisons les jeux de données du deuxième semestre de l'année 2022 pour nos données historiques. Ces fichiers ne sont pas directement accessibles via les liens de téléchargement, car le fichier zip contient des fichiers pour différentes années. C'est pourquoi nous les avons mis à disposition sur notre GitHub.
 * **2022_S2_NB_FER.csv** \
 Ce jeu de données présente le nombre de validations des voyageurs par jour par arrêt et par titre de transport sur le réseau ferré.
