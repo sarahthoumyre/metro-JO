@@ -33,29 +33,78 @@ Ce jeu de données présente le nombre de validations des voyageurs par jour par
 Ce jeu de données présente les profils horaires des validations des voyageurs par jour type et par arrêt sur le réseau ferré.
 
 ### Données nettoyées 
-- **Informations lieux des compétitions** \
-Ces données sont issues du web scraping et fournissent des détails importants sur les différents lieux où se déroulent les événements olympiques. Elles comprennent des informations telles que les adresses, les capacités d'accueil, les descriptions des infrastructures et d'autres détails pertinents permettant de mieux comprendre chaque site olympique. Les lieux des compétitions non desservies par les métros sont retirés de notre étude. 
-- **Calendrier**  \
-Ce jeu de données présente le calendrier complet des compétitions pendant les Jeux Olympiques. Issu du web scraping d'un calendrier en ligne, il a été traité pour convertir les dates et heures en format de date et d'heure Python afin de les rendre utilisables. Le tableau a été divisé en deux : un pour les heures de début et un pour les heures de fin. En tenant compte des indications de l'organisation des JO, une réduction de 1h30 a été appliquée à chaque heure de début, et 30 minutes ont été ajoutées à l'heure de fin pour prendre en compte le temps de départ des lieux. Ces heures ont ensuite été converties en plages horaires pour une meilleure utilisation dans le programme. On conserve uniquement les lieux à Paris et le Stade de France. 
-- **Données stations de métro 2022**  \
-Ces données historiques représentent les informations sur les stations de métro pendant la période des JO en 2022, offrant ainsi une vision historique des services et de la disponibilité des stations à cette époque. Elles servent de référence pour analyser les schémas de trafic et de mouvement des voyageurs pendant les Jeux Olympiques.
-- **Informations lignes métro** \
-Ce jeu de données contient des détails spécifiques sur les lignes de métro concernées pendant la période des Jeux Olympiques. Ces informations peuvent inclure les horaires de fonctionnement, les fréquences, les arrêts desservis, les connexions et autres détails opérationnels pour faciliter les déplacements des participants et des spectateurs vers les différents sites olympiques.
 
-## Packages nécessaires
-- Java : Non installable via pip, mais nécessaire pour tabula-py.
-- tabula-py : Utilisé pour extraire des données de fichiers PDF au format tabulaire.
-- openpyxl : Utilisé pour lire et écrire des fichiers Excel au format xlsx.
-- pandas : Bibliothèque de manipulation et d'analyse de données.
-- numpy : Bibliothèque pour le calcul numérique.
-- geopandas : Utilisé pour manipuler des données géospatiales.
-- requests : Pour effectuer des requêtes HTTP.
-- io : Module pour gérer les flux d'entrée/sortie.
-- matplotlib.pyplot : Utilisé pour créer des visualisations.
-- re : Module pour les expressions régulières.
-- bs4 (BeautifulSoup) : Bibliothèque pour le scraping web.
-- difflib : Module pour calculer les différences entre des chaînes de caractères.
-- IPython.utils : Module IPython pour les fonctionnalités utilitaires.
-- display : Pour afficher des objets IPython./
+1. **Informations lieux des compétitions** 
+   
+Ce notebook est destiné à collecter des informations sur les lieux des compétitions pour les Jeux Olympiques de Paris 2024 à partir du site officiel de l'événement (https://www.paris2024.org) ainsi que d'autres sources en ligne, et à organiser ces données dans un tableau. \
+L'objectif final est d'avoir un tableau bien organisé contenant des informations sur les lieux des compétitions, y compris la capacité, les arrêts de métro à proximité, les lignes de métro et le nombre de personnes attendues pour chaque événement.
+
+  **Hypothèses** :
+  - Les informations sur les lieux des compétitions sont disponibles sur le site officiel de Paris 2024.
+  - Les informations sur les arrêts de métro à proximité et les lignes de métro associées à chaque lieu de compétition peuvent être extraites des pages web spécifiques.
+  - Certaines données manquantes pourraient être obtenues à partir d'autres sources pertinentes comme des articles de presse ou des sites tiers.
+  - Les noms des lieux de compétition ont été fournis sous forme de liste appelée lieux.
+  - Les URLs des pages spécifiques pour chaque lieu ont été générées à partir des noms de lieux fournis.
+  - Les informations manquantes sont complétées manuellement en se référant à d'autres sources.
+
+  **Packages nécessaires** :
+  - Pandas pour la manipulation de données tabulaires.
+  - Requests pour effectuer des requêtes HTTP vers les sites web.
+  - BeautifulSoup (module bs4) pour analyser et extraire des informations à partir du HTML des pages web.
+  - Re pour les expressions régulières.
+
+2. **Calendrier**  
+
+  Ce notebook effectue un webscraping du calendrier des compétitions pour les Jeux Olympiques de Paris 2024 à partir d'un fichier PDF hébergé sur le site de Paris 2024. Le script   assure la récupération des données du calendrier des compétitions, leur structuration et la préparation pour une utilisation plus aisée dans l'analyse et la visualisation des     horaires et des lieux des compétitions pour les Jeux Olympiques de Paris 2024. Le tableau a été divisé en deux parties distinctes : l'une pour les heures de début des             événements et l'autre pour les heures de fin. L'objectif de cette division était de traiter ces données pour les rendre plus adaptées à une utilisation pratique.
+
+  **Hypothèses** :
+  - Les informations sur le calendrier des compétitions sont disponibles dans un PDF spécifique hébergé à l'adresse fournie.
+  - Les lieux de compétition sont déjà connus et sont listés dans le vecteur lieux.
+  - Les pages du PDF contiennent les informations concernant les différents lieux de compétition avec des informations sur les dates et horaires des compétitions pour chaque       lieu.
+  - Pour s'aligner avec les directives et les indications spécifiques de l'organisation des Jeux Olympiques, une réduction de 1h30 a été appliquée à chaque heure de début des       événements. Cette réduction prend en compte le temps nécessaire pour permettre aux participants et aux spectateurs de se rendre sur les lieux des compétitions.
+  - De manière similaire, 30 minutes ont été ajoutées à l'heure de fin de chaque événement pour prendre en compte le temps de départ des lieux une fois les compétitions             terminées.
+  - Les heures ainsi ajustées ont ensuite été converties en plages horaires, créant ainsi des intervalles de temps spécifiques pour chaque événement.
+  - Seuls les lieux à Paris ainsi que le Stade de France ont été conservés dans ce jeu de données. Cette sélection a été effectuée en fonction des lieux accessibles par métro      (identifiés dans le notebook Informations lieux des compétitions).
+
+  **Packages nécessaires** :
+  - Pandas pour la manipulation de données tabulaires.
+  - Java : Non installable via pip, mais nécessaire pour tabula-py
+  - Tabula pour extraire les données à partir d'un fichier PDF.
+  - NumPy pour certaines opérations de manipulation de données.
+
+3. **Données stations de métro 2022**
+   
+  Ce script utilise la bibliothèque Pandas pour importer, analyser et manipuler des données relatives aux validations des voyageurs dans le réseau ferré pendant le second           semestre de l'année 2022. Il effectue différentes opérations sur ces données, provenant de sources variées comme des fichiers CSV accessibles en ligne ou localement (dans le     dossier Données importées). Ces données historiques représentent une référence pour analyser les schémas de trafic, la fréquentation des stations de métro et les tendances de     validation des voyageurs. Des opérations de filtrage sont effectuées pour obtenir les données spécifiques à la période des Jeux Olympiques, mais en 2022 (c'est-à-dire du 24       juillet au 11 août 2022). Ces données filtrées sont agrégées et des calculs de moyennes sont réalisés pour obtenir le nombre moyen de validations par arrêt sur cette période.
+
+   **Packages nécessaires** :
+  - Pandas pour la manipulation et l'analyse des données tabulaires.
+  - re pour travailler avec les expressions régulières dans la manipulation des chaînes de caractères.
+
+4. **Informations lignes métro**
+   
+  Ce notebook contient des détails spécifiques sur les lignes de métro concernées pendant la période des Jeux Olympiques. Le programme importe des données de fréquentation des      stations de métro de la RATP pour l'année 2021, puis effectue une série de traitements pour analyser ces données. Il crée un dictionnaire de tableaux pour chaque ligne de         métro, analysant la fréquentation de chaque station (en fournissant diverses statistiques telles que la moyenne quotidienne pendant les JO 2022, la part de trafic par station     etc).
+
+  **Packages nécessaires** :
+  - Pandas  pour la manipulation des données sous forme de DataFrame.
+  - numpy pour des opérations mathématiques.
+  - re pour les opérations liées aux expressions régulières.
+  - difflib pour trouver les correspondances les plus proches entre les noms des stations.
+  - io et display de IPython pour la capture de sortie et l'affichage dans un notebook.
+
+## Bilan des packages nécessaires
+- Java 
+- tabula-py 
+- openpyxl
+- pandas 
+- numpy 
+- geopandas 
+- requests 
+- io 
+- matplotlib.pyplot 
+- re 
+- bs4 (BeautifulSoup) 
+- difflib 
+- IPython.utils 
+- display \
 On utilise %pip install <nom_du_package> pour installer les packages dans une cellule de notebook. 
 
