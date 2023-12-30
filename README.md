@@ -112,7 +112,7 @@ Le notebook main contient une copie des notebook Programmes et Statistiques desc
 Nos statistiques descriptives se divisent en deux partie : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
 
 **Packages nécessaires** :
-- xx
+- xx A compléter quand ca sera fini
 
 ## Bilan des packages nécessaires
 - Java 
