@@ -39,13 +39,13 @@ Ce jeu de données présente les profils horaires des validations des voyageurs 
 1. **Informations lieux des compétitions** 
    
 Ce notebook est destiné à collecter des informations sur les lieux des compétitions pour les Jeux Olympiques de Paris 2024 à partir du site officiel de l'événement ainsi que d'autres sources en ligne, et à organiser ces données dans un tableau. \
-L'objectif final est d'avoir un tableau bien organisé contenant des informations sur les lieux des compétitions, y compris la capacité, les arrêts de métro à proximité, les lignes de métro et le nombre de personnes attendues pour chaque événement.
+L'objectif final est d'avoir un tableau organisé contenant des informations sur les lieux des compétitions, y compris la capacité, les arrêts de métro à proximité, les lignes de métro et le nombre de personnes attendues pour chaque événement.
 
   **Hypothèses** :
   - Les informations sur les lieux des compétitions sont disponibles sur le site officiel de Paris 2024 (https://www.paris2024.org). 
   - Les noms des lieux de compétition ont été fournis sous forme de liste appelée lieux. Les URLs des pages spécifiques pour chaque lieu ont été générées à partir des noms de lieux fournis.
   - Les informations sur les arrêts de métro à proximité et les lignes de métro associées à chaque lieu de compétition peuvent être extraites des pages web spécifiques.
-  - Certaines données manquantes pourraient être obtenues à partir d'autres sources pertinentes comme des articles de presse ou des sites tiers (Pour la Concorde : https://sportetsociete.org/2022/10/20/paris-2024-un-cadre-majestueux-pour-louverture-des-jeux-paralympiques ; pour Arena Paris Sud : https://fr.wikipedia.org/wiki/Arena_Porte_de_la_Chapelle).
+  - Certaines données manquantes sont obtenues à partir d'autres sources pertinentes comme des articles de presse ou des sites tiers (Pour la Concorde : https://sportetsociete.org/2022/10/20/paris-2024-un-cadre-majestueux-pour-louverture-des-jeux-paralympiques ; pour Arena Paris Sud : https://fr.wikipedia.org/wiki/Arena_Porte_de_la_Chapelle).
 
   **Packages nécessaires** :
   - Pandas pour la manipulation de données tabulaires.
@@ -110,7 +110,7 @@ L'objectif final est d'avoir un tableau bien organisé contenant des information
 
   2. **Statistiques descriptives**  
 
-  Nos statistiques descriptives se divisent en deux partie : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
+  Nos statistiques descriptives se divisent en deux parties : une première partie réalisée à partir des données importées et nettoyées (voir ci-dessous la description de ces données) ; et une seconde partie réalisée à partir des résultats de nos programmes.
 
   **Packages nécessaires** :
   - Pandas pour la manipulation et l'analyse des données tabulaires.
